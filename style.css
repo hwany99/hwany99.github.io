@@ -1,0 +1,53 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+header, section, footer {
+  padding: 20px;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
+
+header h2 {
+  color: #333;
+}
+/* 헤더 내 h1 태그에 대한 스타일 변경 */
+header h1 {
+    color: #fff; /* 여기서 색상을 변경해 보세요. 예: 검정색(#000) 또는 다른 색상 */
+  }
+  
+
+/* 프로필 헤더와 이미지에 대한 스타일 */
+#profile-header {
+    text-align: center;
+}
+
+#profile-picture {
+    width: 150px; /* 너비를 150px로 조정 */
+    height: 150px; /* 높이를 150px로 조정 */
+    border-radius: 50%; /* 원형 모양으로 만들기 */
+    margin: 10px auto; /* 상하 여백을 주고 좌우를 중앙 정렬 */
+    display: block; /* 블록 레벨 요소로 만들어서 중앙 정렬 가능하게 함 */
+}

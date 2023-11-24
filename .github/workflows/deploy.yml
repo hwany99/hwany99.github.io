@@ -1,29 +1,19 @@
-name: Deploy Website
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v2
-
-    - name: Set up Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages
-        folder: build  # 빌드 디렉터리를 여기에 지정
+        branch: gh-pages  # 배포할 브랜치
+        folder: .         # 현재 디렉터리 (프로젝트 루트)
+

@@ -1,19 +1,21 @@
-name: Deploy to GitHub Pages
-
+# 이 워크플로는 'main' 브랜치에 푸시될 때마다 실행됩니다.
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # 'main' 브랜치에 대한 푸시 이벤트를 감지합니다.
 
+# 'deploy'라는 작업을 정의합니다.
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # 이 작업은 최신 Ubuntu 버전을 실행하는 환경에서 수행됩니다.
+
+    # 이 작업은 여러 단계로 구성됩니다.
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2  # GitHub 저장소의 코드를 체크아웃합니다.
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@4.1.4  # JamesIves의 GitHub Pages 배포 액션을 사용합니다.
       with:
-        branch: main  # 배포할 브랜치를 main으로 설정
-        folder: .         # 현재 디렉터리 (프로젝트 루트)
+        branch: main  # 배포할 브랜치를 'main'으로 지정합니다.
+        folder: .     # 현재 디렉터리 (즉, 프로젝트 루트 디렉터리)를 배포 대상으로 지정합니다.
 
